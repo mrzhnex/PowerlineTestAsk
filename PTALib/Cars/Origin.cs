@@ -11,12 +11,10 @@
         {
             return FuelMax / GetFuelUsage() * Speed;
         }
-
         public virtual float GetRemainingDistance()
         {
             return FuelCurrent / GetFuelUsage() * Speed;
         }
-
         public float GetDrivingTime(float fuel, float distance, out float missingFuel)
         {
             missingFuel = 0.0f;
@@ -29,7 +27,6 @@
 
             return hours;
         }
-
         public float GetFuelUsage()
         {
             return FuelUsage;
