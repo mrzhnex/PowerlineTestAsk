@@ -3,8 +3,13 @@
     public class Light : Origin
     {
         public int Passengers { get; private set; } = 0;
-        public int MaxPassengers { get; set; } = 3;
+        public int MaxPassengers { get; private set; } = 3;
         private float ReduceDistancePerPassenger { get; set; } = 0.06f;
+
+        public Light(int MaxPassengers)
+        {
+            this.MaxPassengers = MaxPassengers;
+        }
 
         public override float GetRemainingDistance()
         {
